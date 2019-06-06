@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../SASS/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
+</head>
+
+<body class="bg-grey">
+  <!-- nav horizontal -->
+  <script>
+    function myFunction() {
+      // Declare variables 
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    $('#meuModal').on('shown.bs.modal', function () {
+      $('#meuInput').trigger('focus')
+    })
+  </script>
+  <nav
+    class="navbar navbar-light bg-light nav-horizontal align-items-center fixed-top d-flex justify-content-between shadow"
+    onChange={this.tokenChange}>
+    <a class="navbar-brand" href="../home.html">
+      <img src='../../ASSETS/logo.png' width="180" height="auto" alt="" />
+    </a>
+    <div class="d-flex align-items-center">
+      <p class="m-0">flores.joice@gmail.com</p>
+      <button class='btn px-4 btn-info ml-3'><a href="../../index.html" class="text-white">Sair</a></button>
+    </div>
+  </nav>
+
+  <!-- inicio da view de renderização -->
+  <div class="d-flex w-100 align-items-center mt-5">
+    <div class='d-flex w-100 '>
+      <!-- nav vertical -->
+      <div class='view-navVertical w-100 d-flex align-items-start justify-content-end'>
+        <div class='view-navVertical__list'>
+          <a href='../consulta.html' class='list-group-item view-navVertical__bg d-flex justify-content-between w-100'>
+            <span class='text-light'>Consulta</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#enriquecimento" aria-controls="enriquecimento" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Enriquecimento</span>
+          </a>
+
+          <div class='collapse' id="enriquecimento">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaEnriquecimento" aria-controls="listaEnriquecimento">
+              <li class="nav-item d-flex" id="listaEnriquecimento">
+                <a href='../enriquecimento/enriquecer.html' class="nav-link text-light">Enriquecer</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../atribuicao_cpf/atribuicao.html' class="nav-link text-light">Atribuição de CPF</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../validacao_hot/validacaoHot.html' class="nav-link text-light">Validação Hot</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href='../higienizacao/atribuicao.html' id='higienizacao'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Higienização</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#gerencial" aria-controls="gerencial" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Gerencial</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="gerencial">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaGerencial">
+              <li class="nav-item" id="listaGerencial"> <a href="./contas.html" id='contas'
+                  class="nav-link text-light">Contas</a> </li>
+              <li class="nav-item" id="listaGerencial"><a href="./personalizacao.html" id='personalizacao'
+                  class="nav-link text-light">Personalização</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="./extrato.html" id='extrtatoServicos'
+                  class="nav-link text-light">Extrato de serviços</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="./fechamento.html" id='previaFechamento'
+                  class="nav-link text-light">Prévia de fechamento</a></li>
+            </ul>
+          </div>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#monitoracao" aria-controls="monitoracao" aria-expanded="true"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Monitoração</span>
+          </a>
+
+          <div class="collapse" id="monitoracao">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#monitoracao">
+              <li class="nav-item">
+                <a href="../monitoracao/monitConsulta.html" id='monitConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitEnriquecimento.html" id='monitEnriquec'
+                  class="nav-link text-light">Enriquecimento
+                </a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitWebService.html" id='monitWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado5" aria-controls="conteudoNavbarSuportado"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Relatório</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado5">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatorio/relatConsulta.html" id='relatConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatorio/relatEnriquecimento.html" id='relatEnriq'
+                  class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatorio/relatMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  list</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatorio/relatHigienizacao.html" id='relatHigienizacao'
+                  class="nav-link text-light">Higienização
+                </a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatorio/relatWebService.html" id='relatWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado6" aria-controls="conteudoNavbarSuportado6"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Histórico & Downloads</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado6">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoEnriq.html" id='relatConsulta'
+                  class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  List</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoHigienizacao.html" id='relatHigienizacao'
+                  class="nav-link text-light">Higienização</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoWebService.html" id='relatWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoVeicular.html" id='relatWebService' class="nav-link text-light">Consulta
+                  Veicular</a>
+              </li>
+            </ul>
+          </div>
+
+          <a id='mailingList' href='../mailingList.html'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Higienização</span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="w-100 height-enriquecer">
+
+        <!-- inicio secão enriquecer -->
+        <div class='w-100 height-enriquecer mb-5'>
+
+          <!-- inicio cabeçalho de enriquecimento -->
+          <div class="d-flex justify-content-between align-items-center mt-5 ">
+            <p class='h4 text-info pl-4'>Gerenciamento de Contas</p>
+          </div>
+          <!-- fim do cabeçalho de enriquecimento -->
+
+          <!-- inicio body enriquecimento -->
+          <div class='d-flex flex-column align-items-center mt-5 container w-100'>
+
+            <div class='container mt-3 d-flex flex-column align-items-center justify-content-center w-100'>
+
+              <input class="w-50 border p-2 rounded mb-4" type="text" autofocus id="myInput" onkeyup="myFunction()"
+                placeholder="Busque pelo nome do Cliente..">
+
+              <table id="myTable" class="w-100 border redound bg-white">
+                <tr class="header bg-info redound">
+                  <th class="text-white py-3 pl-4" style="width:40%;">Cliente</th>
+                  <th class="text-white py-3 " style="width:15%;">Revenda</th>
+                  <th class="text-white py-3 " style="width:15%;">status</th>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">ALX Revenda</td>
+                  <td>Sistema</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Auto Facil </td>
+                  <td>PGA</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Busco Minha Familia</td>
+                  <td>InfoQualy</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Carolini</td>
+                  <td>Sistema</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Checkon-line</td>
+                  <td>InfoQualy</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">CONFIANCA</td>
+                  <td>PGA</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Consulte</td>
+                  <td>Sistema</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Dataminer</td>
+                  <td>InfoQualy</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Engage</td>
+                  <td>PGA</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">estilotelemarketing</td>
+                  <td>Sistema</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Exata</td>
+                  <td>InfoQualy</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="line-buttons border-bottom">
+                  <td class="pl-4">Exponencial</td>
+                  <td>PGA</td>
+                  <td class="buttons-box d-flex align-items-center justify-content-center w-50">
+                    <p class="texto m-0">Ativo</p>
+                    <div class="buttons position-relative d-flex align-items-center justify-content-around w-75">
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/edit.svg" alt=""></div>
+                      <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-2 buttons-img"><img
+                          src="../../ASSETS/delete.png" alt=""></a>
+                      </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade mt-5" id="ModalLongoExemplo" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog mt-5 bg-info p-2" role="document">
+                <div class="modal-content shadow">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-info" id="exampleModalLabel">ALX Revenda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body d-flex">
+                    <div class="col-6">
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Cliente</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="ALX Revenda">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Contato</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="testeapi">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Email</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="alx@gmail.com">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Tipo de cliente</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="Revenda">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Carteira</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Razão social</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="ALX Revenda Ltda">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">Telefone</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="11-1239-4568">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">IP de acesso</label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="192.168.0.0">
+                      </div>
+                      <div class="d-flex flex-column">
+                        <label class="text-info" for="">
+                          <p class="texto m-0">Ativo</p>
+                        </label>
+                        <input class="rounded pl-1 border-light" type="text" placeholder="Sim">
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-info">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- fim body enriquecimento -->
+        </div>
+      </div>
+    </div>
+    <!-- fim da view de renderização -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

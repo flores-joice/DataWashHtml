@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Histórico & Download</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../SASS/index.css">
+  <link rel="stylesheet" href="../../SASS/fonte.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
+  <link rel="shortcut icon" href="../../ASSETS/favicon.ico" />
+
+</head>
+
+<body>
+  <!-- nav horizontal -->
+  <nav
+    class="navbar navbar-light bg-light nav-horizontal align-items-center fixed-top d-flex justify-content-between shadow"
+    onChange={this.tokenChange}>
+    <a class="navbar-brand" href="../home.html">
+      <img src='../../ASSETS/logo.png' width="180" height="auto" alt="" />
+    </a>
+    <div class="d-flex align-items-center">
+      <p class="m-0">flores.joice@gmail.com</p>
+      <button class='btn px-4 btn-info ml-3'><a href="../../index.html" class="text-white">Sair</a></button>
+    </div>
+  </nav>
+
+  <!-- inicio da view de renderização -->
+  <div class="mt-5">
+    <div class='d-flex w-100'>
+
+      <!-- nav vertical -->
+      <div class='view-navVertical w-100 d-flex align-items-start justify-content-end'>
+        <div class='view-navVertical__list'>
+          <a href='../consulta.html' class='list-group-item view-navVertical__bg d-flex justify-content-between w-100'>
+            <span class='text-light'>Consulta</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#enriquecimento" aria-controls="enriquecimento" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Enriquecimento</span>
+          </a>
+
+          <div class='collapse' id="enriquecimento">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaEnriquecimento" aria-controls="listaEnriquecimento">
+              <li class="nav-item d-flex" id="listaEnriquecimento">
+                <a href='../enriquecimento/enriquecer.html' class="nav-link text-light">Enriquecer</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../atribuicao_cpf/atribuicao.html' class="nav-link text-light">Atribuição de
+                  CPF</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../validacao_hot/validacaoHot.html' class="nav-link text-light">Validação Hot</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href='../higienizacao/atribuicao.html' id='higienizacao'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Higienização</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#gerencial" aria-controls="gerencial" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Gerencial</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="gerencial">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaGerencial">
+              <li class="nav-item" id="listaGerencial"> <a href="../gerencial/contas.html" id='contas'
+                  class="nav-link text-light">Contas</a> </li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencial/personalizacao.html" id='personalizacao'
+                  class="nav-link text-light">Personalização</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencialextrato.html" id='extrtatoServicos'
+                  class="nav-link text-light">Extrato de serviços</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencialfechamento.html" id='previaFechamento'
+                  class="nav-link text-light">Prévia de fechamento</a></li>
+            </ul>
+          </div>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#monitoracao" aria-controls="monitoracao" aria-expanded="true"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Monitoração</span>
+          </a>
+
+          <div class="collapse" id="monitoracao">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#monitoracao">
+              <li class="nav-item">
+                <a href="../monitoracao/monitConsulta.html" id='monitConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitEnriquecimento.html" id='monitEnriquec'
+                  class="nav-link text-light">Enriquecimento
+                </a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitWebService.html" id='monitWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado5" aria-controls="conteudoNavbarSuportado"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Relatório</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado5">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatConsulta.html" id='relatConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatEnriquecimento.html" id='relatEnriq' class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  list</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatHigienizacao.html" id='relatHigienizacao' class="nav-link text-light">Higienização
+                </a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../relatWebService.html" id='relatWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado6" aria-controls="conteudoNavbarSuportado6"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Histórico & Downloads</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado6">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="./historicoEnriq.html" id='relatConsulta' class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./historicoMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  List</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./historicoHigienizacao.html" id='relatHigienizacao'
+                  class="nav-link text-light">Higienização</a>
+              </li>
+            </ul>
+          </div>
+
+          <a id='mailingList' href='../mailingList.html'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Mailing List</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- inicio secão historico -->
+      <div class="w-100">
+
+        <!-- inicio cabeçalho de enriquecimento -->
+        <div class="d-flex justify-content-between align-items-center mt-5 ">
+          <p class='h4 text-info pl-4'>Histórico & Download - Higienização</p>
+        </div>
+        <!-- fim do cabeçalho de enriquecimento -->
+
+        <!-- inicio body enriquecimento -->
+        <div class='w-100 container'>
+
+          <!-- FILTRO -->
+          <div class="d-flex bg-light py-3 border rounded">
+
+            <div class='input-group d-flex flex-column w-25 px-2'>
+              <p class='m-0'>Cliente:</p>
+              <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Escolha o cliente</option>
+                  <option value="1">Sistema</option>
+                  <option value="2">PGA</option>
+                  <option value="3">InfoQualy</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-group d-flex flex-column w-50 px-2">
+              <p class='m-0'>Carteira:</p>
+              <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Escolha o carteira</option>
+                  <option value="1">Clientes próprios</option>
+                </select>
+              </div>
+            </div>
+
+            <div class='input-group d-flex flex-column w-25 px-2'>
+              <p class='m-0'>Estado:</p>
+              <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Escolha o carteira</option>
+                  <option value="1">Aguardando</option>
+                  <option value="2">Cancelado</option>
+                  <option value="3">Erro</option>
+                  <option value="4">Finalizado</option>
+                  <option value="5">Processando</option>
+                  <option value="6">Importando</option>
+                  <option value="7">Exportando</option>
+                  <option value="8">Limpando</option>
+                  <option value="9">Calculando</option>
+                  <option value="10">Enviando</option>
+
+                </select>
+              </div>
+            </div>
+
+            <div class='d-flex justify-content-center align-items-center px-2 mt-4'>
+              <button class='btn btn-info' data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false"
+                aria-controls="collapseFilter">Gerar Relatório</button>
+            </div>
+
+          </div>
+          <!-- FIM FILTRO -->
+
+          <table id="myTable" class="w-100 border redound bg-white mt-3">
+            <thead>
+              <tr class="bg-info d-flex justify-content-between align-items-center">
+                <th class="text-white py-3 col-2">Cliente</th>
+                <th class="text-white py-3 col">Data</th>
+                <th class="text-white py-3 col">Descrição</th>
+                <th class="text-white py-3 col">Arquivo</th>
+                <th class="text-white py-3 col">Linhas no arquivo </th>
+                <th class="text-white py-3 col">Estado</th>
+                <th class="text-white py-3 col">Tempo</th>
+                <th class="text-white py-3 col-2">Progresso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="line-buttons position-relative border-bottom d-flex align-items-center">
+                <td class="col-2">PGA \ Ação</td>
+                <td class="col">05/06/2019</td>
+                <td class="col">M690506A</td>
+                <td class="col">M690506A.txt</td>
+                <td class="col">2.656</td>
+                <td class="col">Finalizado</td>
+                <td class="col">00:00:34</td>
+                <td class="col-2 buttons-box d-flex align-items-center justify-content-center">
+                  <div class="progress position-absolute bg-info d-flex justify-content-center align-items-center">
+                    <p class="text-white m-0">100%</p>
+                  </div>
+                  <div
+                    class="buttons-historico position-absolute d-flex align-items-center justify-content-around w-75">
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-1 buttons-img">
+                      <img src="../../ASSETS/visualizar.png" alt="visualizar">
+                    </div>
+                    <div data-toggle="modal" data-target="#" class="p-1 buttons-img">
+                      <img src="../../ASSETS/download.png" alt="download">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo1" class="p-1 buttons-img">
+                      <img src="../../ASSETS/estatitica.png" alt="estatitica">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo2" class="p-1 buttons-img">
+                      <img src="../../ASSETS/edit.svg" alt="editar">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo3" class="p-1 buttons-img">
+                      <img src="../../ASSETS/delete.png" alt="excluir">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="line-buttons position-relative border-bottom d-flex align-items-center">
+                <td class="col-2">PGA \ Ação</td>
+                <td class="col">05/06/2019</td>
+                <td class="col">M690506A</td>
+                <td class="col">M690506A.txt</td>
+                <td class="col">2.656</td>
+                <td class="col">Finalizado</td>
+                <td class="col">00:00:34</td>
+                <td class="col-2 buttons-box d-flex align-items-center justify-content-center">
+                  <div class="progress position-absolute bg-info d-flex justify-content-center align-items-center">
+                    <p class="text-white m-0">100%</p>
+                  </div>
+                  <div
+                    class="buttons-historico position-absolute d-flex align-items-center justify-content-around w-75">
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-1 buttons-img">
+                      <img src="../../ASSETS/visualizar.png" alt="visualizar">
+                    </div>
+                    <div data-toggle="modal" data-target="#" class="p-1 buttons-img">
+                      <img src="../../ASSETS/download.png" alt="download">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo1" class="p-1 buttons-img">
+                      <img src="../../ASSETS/estatitica.png" alt="estatitica">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo2" class="p-1 buttons-img">
+                      <img src="../../ASSETS/edit.svg" alt="editar">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo3" class="p-1 buttons-img">
+                      <img src="../../ASSETS/delete.png" alt="excluir">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="line-buttons position-relative border-bottom d-flex align-items-center">
+                <td class="col-2">PGA \ Ação</td>
+                <td class="col">05/06/2019</td>
+                <td class="col">M690506A</td>
+                <td class="col">M690506A.txt</td>
+                <td class="col">2.656</td>
+                <td class="col">Finalizado</td>
+                <td class="col">00:00:34</td>
+                <td class="col-2 buttons-box d-flex align-items-center justify-content-center">
+                  <div class="progress position-absolute bg-info d-flex justify-content-center align-items-center">
+                    <p class="text-white m-0">100%</p>
+                  </div>
+                  <div
+                    class="buttons-historico position-absolute d-flex align-items-center justify-content-around w-75">
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-1 buttons-img">
+                      <img src="../../ASSETS/visualizar.png" alt="visualizar">
+                    </div>
+                    <div data-toggle="modal" data-target="#" class="p-1 buttons-img">
+                      <img src="../../ASSETS/download.png" alt="download">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo1" class="p-1 buttons-img">
+                      <img src="../../ASSETS/estatitica.png" alt="estatitica">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo2" class="p-1 buttons-img">
+                      <img src="../../ASSETS/edit.svg" alt="editar">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo3" class="p-1 buttons-img">
+                      <img src="../../ASSETS/delete.png" alt="excluir">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="line-buttons position-relative border-bottom d-flex align-items-center">
+                <td class="col-2">PGA \ Ação</td>
+                <td class="col">05/06/2019</td>
+                <td class="col">M690506A</td>
+                <td class="col">M690506A.txt</td>
+                <td class="col">2.656</td>
+                <td class="col">Finalizado</td>
+                <td class="col">00:00:34</td>
+                <td class="col-2 buttons-box d-flex align-items-center justify-content-center">
+                  <div class="progress position-absolute bg-info d-flex justify-content-center align-items-center">
+                    <p class="text-white m-0">100%</p>
+                  </div>
+                  <div
+                    class="buttons-historico position-absolute d-flex align-items-center justify-content-around w-75">
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo" class="p-1 buttons-img">
+                      <img src="../../ASSETS/visualizar.png" alt="visualizar">
+                    </div>
+                    <div data-toggle="modal" data-target="#" class="p-1 buttons-img">
+                      <img src="../../ASSETS/download.png" alt="download">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo1" class="p-1 buttons-img">
+                      <img src="../../ASSETS/estatitica.png" alt="estatitica">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo2" class="p-1 buttons-img">
+                      <img src="../../ASSETS/edit.svg" alt="editar">
+                    </div>
+                    <div data-toggle="modal" data-target="#ModalLongoExemplo3" class="p-1 buttons-img">
+                      <img src="../../ASSETS/delete.png" alt="excluir">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Modal 1 -->
+          <div class="modal fade mt-5" id="ModalLongoExemplo" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg mt-5 bg-info p-2" role="document">
+              <div class="modal-content shadow">
+
+                <div class="modal-header">
+                  <h5 class="modal-title text-info" id="exampleModalLabel">ALX Revenda</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body d-flex position-relative modal-scroll">
+                  <table id="myTable" class="w-100 border redound bg-white mt-3">
+                    <thead>
+                      <tr class="bg-info">
+                        <th class="text-white text-center align-middle px-5" scope="col-2">CPF</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">TELEFONE</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">NOME</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">LOGRADOURO</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">NUMERO</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">COMPLEMENTO</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">CEP</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">BAIRRO</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">CIDADE</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">UF</th>
+                        <th class="text-white text-center align-middle px-5" scope="col">EMAIL</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-bottom">
+                        <td class="text-center">00024753327</td>
+                        <td class="text-center">6232992329</td>
+                        <td class="text-center">GLEICIANE DA SILVA</td>
+                        <td class="text-center">R D PEDRO II</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">Q 164 LT 22 CS 1</td>
+                        <td class="text-center">74465140</td>
+                        <td class="text-center">JD NOVA ESPERANCA</td>
+                        <td class="text-center">GOIANIA</td>
+                        <td class="text-center">GO</td>
+                        <td class="text-center">gleicianeatelie@hotmail.com</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="text-center">00031635393</td>
+                        <td class="text-center">98999092096</td>
+                        <td class="text-center">ALDENIR DO NASCIMENTO CUNHA</td>
+                        <td class="text-center">R CLODOYALDO CARDOSO</td>
+                        <td class="text-center">640</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">65200000 </td>
+                        <td class="text-center">MATRIZ</td>
+                        <td class="text-center">PINHEIRO</td>
+                        <td class="text-center">MA</td>
+                        <td class="text-center"></td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="text-center">00042017289</td>
+                        <td class="text-center">9134252253</td>
+                        <td class="text-center">JESSICA ROCHA GUEDES</td>
+                        <td class="text-center">TV LAURO SODRE</td>
+                        <td class="text-center">98</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">68600000 </td>
+                        <td class="text-center">MORRO</td>
+                        <td class="text-center">BRAGANCA</td>
+                        <td class="text-center">PA</td>
+                        <td class="text-center"></td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="text-center">00051198630</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">CLAUDIO DE SOUZA PERIGO</td>
+                        <td class="text-center">R RUBENS DE ARRUDA</td>
+                        <td class="text-center">46</td>
+                        <td class="text-center"></td>
+                        <td class="text-center">13846745 </td>
+                        <td class="text-center">PRQ RES YPE AMARELO</td>
+                        <td class="text-center">MOGI GUACU</td>
+                        <td class="text-center">SP</td>
+                        <td class="text-center"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="modal-footer ">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-info">Salvar mudanças</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- fim Modal -->
+
+          <!-- modal 2 -->
+          <div class="modal fade mt-5" id="ModalLongoExemplo1" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-lg mt-5 bg-info p-2" role="document">
+              <div class="modal-content shadow">
+
+                <div class="modal-header">
+                  <h5 class="modal-title text-info" id="exampleModalLabel">ALX Revenda</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body d-flex position-relative modal-scroll">
+                  <table id="myTable" class="w-100 border redound bg-white mt-3">
+                    <tbody class="rounded">
+                      <tr class="border-bottom">
+                        <td class="col-5">Total de Registros</td>
+                        <td class="text-center col-2 border-left border-right px-3">14</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                              aria-valuemax="100" style="width:100%">
+                              100%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">CPFs</td>
+                        <td class="text-center col-2 border-left border-right px-3">7</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                              aria-valuemax="100" style="width:50%">
+                              50%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">CNPJs</td>
+                        <td class="text-center col-2 border-left border-right px-3">7</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                              aria-valuemax="100" style="width:50%">
+                              50%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com endereços</td>
+                        <td class="text-center col-2 border-left border-right px-3">14</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                              aria-valuemax="100" style="width:100%">
+                              100%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com telefones</td>
+                        <td class="text-center col-2 border-left border-right px-3">11</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="78" aria-valuemin="0"
+                              aria-valuemax="100" style="width:78%">
+                              78%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com telefones fixos</td>
+                        <td class="text-center col-2 border-left border-right px-3">8</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="57" aria-valuemin="0"
+                              aria-valuemax="100" style="width:57%">
+                              57%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com telefones celulares</td>
+                        <td class="text-center col-2 border-left border-right px-3">14</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="64" aria-valuemin="0"
+                              aria-valuemax="100" style="width:64%">
+                              64%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com e-mails</td>
+                        <td class="text-center col-2 border-left border-right px-3">4</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="28" aria-valuemin="0"
+                              aria-valuemax="100" style="width:28%">
+                              28%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com dados cadastrais</td>
+                        <td class="text-center col-2 border-left border-right px-3">14</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                              aria-valuemax="100" style="width:100%">
+                              100%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com dados de contato</td>
+                        <td class="text-center col-2 border-left border-right px-3">14</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                              aria-valuemax="100" style="width:100%">
+                              100%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="col-5">Registros enriquecidos com dados sócio-econômicos</td>
+                        <td class="text-center col-2 border-left border-right px-3">10</td>
+                        <td class="text-center col-5">
+                          <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="71" aria-valuemin="0"
+                              aria-valuemax="100" style="width:71%">
+                              71%
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="modal-footer ">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-info">Salvar mudanças</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- fim modal -->
+
+          <!-- modal 3 -->
+          <div class="modal fade mt-5" id="ModalLongoExemplo2" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog mt-5 bg-info p-2" role="document">
+              <div class="modal-content shadow">
+
+                <div class="modal-header">
+                  <h5 class="modal-title text-info" id="exampleModalLabel">Alteração de cliente</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body d-flex position-relative justify-content-center">
+                  <div class='input-group d-flex align-items-center flex-column w-50 pt-2 pb-5 mb-5'>
+                    <p>Selecione um novo cliente:</p>
+                    <div class="input-group">
+                      <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Escolha o cliente</option>
+                        <option value="1">Sistema</option>
+                        <option value="2">PGA</option>
+                        <option value="3">InfoQualy</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer ">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-info">Salvar mudanças</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- fim modal -->
+
+        </div>
+        <!-- fim body enriquecimento -->
+
+      </div>
+      <!-- fim secão historico -->
+
+    </div>
+  </div>
+  <!-- fim da view de renderização -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

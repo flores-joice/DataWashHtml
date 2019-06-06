@@ -1,0 +1,55 @@
+.table-scroll {
+  width: 80vw;
+  overflow-x: scroll;
+}
+
+.table-scroll > thead {
+  min-width: 250vw;
+}
+
+.table-scroll > tbody {
+  min-width: 250vw;
+}
+
+.table-scroll-relHigien {
+  width: 80vw;
+  overflow-x: scroll;
+}
+
+.table-scroll-relHigien > thead {
+  width: 100vw;
+}
+
+.table-scroll-relHigien > thead > tr > th {
+  background-color: #17a2b8;
+}
+
+.table-scroll-relHigien > tbody {
+  width: 100vw;
+}
+
+.table-scroll-relHigien > tbody > tr {
+  background-color: #fafafa;
+}
+
+.table-text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.table-text-12 {
+  font-size: 12px;
+}
+
+.buttom-absolute {
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1rem;
+}
+
+.buttom-absolute-relHigien {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
+}
+/*# sourceMappingURL=fonte.css.map */

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Relatorio de Consulta</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../SASS/index.css">
+  <link rel="stylesheet" href="../../SASS/fonte.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
+</head>
+
+<body>
+  <!-- nav horizontal -->
+  <nav
+    class="navbar navbar-light bg-light nav-horizontal align-items-center fixed-top d-flex justify-content-between shadow"
+    onChange={this.tokenChange}>
+    <a class="navbar-brand" href="../home.html">
+      <img src='../../ASSETS/logo.png' width="180" height="auto" alt="" />
+    </a>
+    <div class="d-flex align-items-center">
+      <p class="m-0">flores.joice@gmail.com</p>
+      <button class='btn px-4 btn-info ml-3'><a href="../../index.html" class="text-white">Sair</a></button>
+    </div>
+  </nav>
+
+  <!-- inicio da view de renderização -->
+  <div class="d-flex w-100 align-items-center mt-5">
+    <div class='d-flex w-100'>
+
+      <!-- nav vertical -->
+      <div class='view-navVertical w-100 d-flex align-items-start justify-content-end'>
+        <div class='view-navVertical__list'>
+          <a href='../consulta.html' class='list-group-item view-navVertical__bg d-flex justify-content-between w-100'>
+            <span class='text-light'>Consulta</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#enriquecimento" aria-controls="enriquecimento" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Enriquecimento</span>
+          </a>
+
+          <div class='collapse' id="enriquecimento">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaEnriquecimento" aria-controls="listaEnriquecimento">
+              <li class="nav-item d-flex" id="listaEnriquecimento">
+                <a href='../enriquecimento/enriquecer.html' class="nav-link text-light">Enriquecer</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../atribuicao_cpf/atribuicao.html' class="nav-link text-light">Atribuição de
+                  CPF</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../validacao_hot/validacaoHot.html' class="nav-link text-light">Validação Hot</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href='../higienizacao/atribuicao.html' id='higienizacao'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Higienização</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#gerencial" aria-controls="gerencial" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Gerencial</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="gerencial">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaGerencial">
+              <li class="nav-item" id="listaGerencial"> <a href="../gerencial/contas.html" id='contas'
+                  class="nav-link text-light">Contas</a> </li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencial/personalizacao.html" id='personalizacao'
+                  class="nav-link text-light">Personalização</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencialextrato.html" id='extrtatoServicos'
+                  class="nav-link text-light">Extrato de serviços</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencialfechamento.html" id='previaFechamento'
+                  class="nav-link text-light">Prévia de fechamento</a></li>
+            </ul>
+          </div>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#monitoracao" aria-controls="monitoracao" aria-expanded="true"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Monitoração</span>
+          </a>
+
+          <div class="collapse" id="monitoracao">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#monitoracao">
+              <li class="nav-item">
+                <a href="../monitoracao/monitConsulta.html" id='monitConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitEnriquecimento.html" id='monitEnriquec'
+                  class="nav-link text-light">Enriquecimento
+                </a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitWebService.html" id='monitWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado5" aria-controls="conteudoNavbarSuportado"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Relatório</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado5">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatConsulta.html" id='relatConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatEnriquecimento.html" id='relatEnriq' class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  list</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatHigienizacao.html" id='relatHigienizacao' class="nav-link text-light">Higienização
+                </a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatWebService.html" id='relatWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+          data-toggle="collapse" data-target="#conteudoNavbarSuportado6" aria-controls="conteudoNavbarSuportado6"
+          aria-expanded="false" aria-label="Alterna navegação">
+          <span class='text-light'>Histórico & Downloads</span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado6">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoEnriq.html" id='relatConsulta' class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoMailing.html" id='relatMailingList' class="nav-link text-light">Mailing List</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoHigienizacao.html" id='relatHigienizacao' class="nav-link text-light">Higienização</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoWebService.html" id='relatWebService' class="nav-link text-light">Web Service</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                  <a href="../historico/historicoVeicular.html" id='relatWebService' class="nav-link text-light">Consulta Veicular</a>
+                </li>
+            </ul>
+          </div>
+
+          <a id='mailingList' href='../mailingList.html'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Mailing List</span>
+          </a>
+
+        </div>
+      </div>
+      <!-- fim nav vertical -->
+
+      <div class="w-100">
+
+        <!-- inicio secão enriquecer -->
+        <div class='w-100'>
+
+          <!-- inicio cabeçalho de enriquecimento -->
+          <div class="d-flex justify-content-between align-items-center mt-5 ">
+            <p class='h4 text-info pl-4'>Relatório de Consulta</p>
+          </div>
+          <!-- fim do cabeçalho de enriquecimento -->
+
+          <!-- inicio body enriquecimento -->
+          <div class='w-100 h-100 container px-3 mt-3'>
+
+            <div class="d-flex flex-wrap bg-light py-3 justify-content-around container rounded">
+              <div class='d-flex flex-column w-50 px-4'>
+                <p class="m-0">Defina o período:</p>
+                <div class="d-flex">
+                  <div class="input-group mr-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">De:</span>
+                    </div>
+                    <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                      aria-describedby="basic-addon1" />
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Até:</span>
+                    </div>
+                    <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                      aria-describedby="basic-addon1" />
+                  </div>
+                </div>
+              </div>
+
+              <div class='d-flex flex-column w-25 px-4'>
+                <p class='m-0'>Cliente: </p>
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Escolha o cliente</option>
+                    <option value="1">Sistema</option>
+                    <option value="2">PGA</option>
+                    <option value="3">InfoQualy</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class='d-flex flex-column w-25 px-4'>
+                <p class='m-0'>Usuário:</p>
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Escolha o usuário</option>
+                    <option value="1">Alan</option>
+                    <option value="2">Alex</option>
+                    <option value="3">Douglas</option>
+                    <option value="4">Emerson</option>
+                    <option value="5">Joice</option>
+                    <option value="6">Natália</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class='d-flex flex-column mt-2 w-75 px-4'>
+                <p class='m-0'>Tipo de relatório:</p>
+                <div class="d-flex">
+                  <div class="input-group mr-1">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <input type="radio" value='analitico' />
+                      </div>
+                    </div>
+                    <span class="form-control">Analítico</span>
+                  </div>
+                  <div class="input-group mr-1">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <input type="radio" value='sintetico' />
+                      </div>
+                    </div>
+                    <span class="form-control">Sintético</span>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <input type="radio" value='total' />
+                      </div>
+                    </div>
+                    <span class="form-control">Total</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class='d-flex justify-content-center align-items-center w-25 mt-4'>
+                <button class='btn btn-info mr-3' data-toggle="collapse" data-target="#collapseFilter"
+                  aria-expanded="false" aria-controls="collapseFilter">Gerar Relatório</button>
+              </div>
+            </div>
+
+            <div class='w-100 collapse' id="collapseFilter">
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <table class="table table-hover mt-5 rounded">
+                  <thead class="bg-info rounded ">
+                    <tr>
+                      <th class="text-white table-title" scope="col">Cliente / C.Custo</th>
+                      <th class="text-white table-title" scope="col">Usuário</th>
+                      <th class="text-white table-title" scope="col">Tipo Consulta</th>
+                      <th class="text-white table-title" scope="col">Data / Hora</th>
+                      <th class="text-white table-title" scope="col">Dado</th>
+                      <th class="text-white table-title" scope="col">Resultado</th>
+                      <th class="text-white table-title" scope="col">IP</th>
+                    </tr>
+                  </thead>
+                  <tbody class='bg-light'>
+                    <tr>
+                      <td class='table-body'>PGA / Paraná Banco</td>
+                      <td class='table-body'>Mesa de novos negocios</td>
+                      <td class='table-body'>Pessoa fisica</td>
+                      <td class='table-body'>24/05/2019 / 11:14:48</td>
+                      <td class='table-body'>245789325</td>
+                      <td class='table-body'>OK</td>
+                      <td class='table-body'>201.48.31.17</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>PGA / LIDER ASSESSORIA</td>
+                      <td class='table-body'>gestaospcapital</td>
+                      <td class='table-body'>Nome </td>
+                      <td class='table-body'>24/05/2019 11:14:47.757 </td>
+                      <td class='table-body'>THAIZA DOS SANTOS SILVA </td>
+                      <td class='table-body'>OK </td>
+                      <td class='table-body'>45.70.84.155</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / PROMOTORA AVANTE CRED</td>
+                      <td class='table-body'>*</td>
+                      <td class='table-body'>Pessoa Física</td>
+                      <td class='table-body'>24/05/2019 11:14:47.340</td>
+                      <td class='table-body'>03099820814</td>
+                      <td class='table-body'>OK</td>
+                      <td class='table-body'>187.103.61.245</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / NUNES ROMERO ADVOGADOS</td>
+                      <td class='table-body'>usuario1</td>
+                      <td class='table-body'> Vizinhos</td>
+                      <td class='table-body'> 24/05/2019 11:14:45.847</td>
+                      <td class='table-body'> 08548967838</td>
+                      <td class='table-body'> NAO LOC</td>
+                      <td class='table-body'> 179.185.133.50</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'> PGA / Ação</th>
+                      <td class='table-body'>sonia.souza</td>
+                      <td class='table-body'> Pessoa Física</td>
+                      <td class='table-body'> 24/05/2019 11:14:45.827</td>
+                      <td class='table-body'> 80735193568</td>
+                      <td class='table-body'> OK</td>
+                      <td class='table-body'> 200.97.90.115</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>PGA / Meireles & Freitas</td>
+                      <td class='table-body'>planejamento_calldesk</td>
+                      <td class='table-body'> Pessoa Física</td>
+                      <td class='table-body'> 24/05/2019 11:14:44.667</td>
+                      <td class='table-body'> 35906464387</td>
+                      <td class='table-body'> OK</td>
+                      <td class='table-body'> 186.211.185.94</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / AMF PROMOTORA</td>
+                      <td class='table-body'>comercial</td>
+                      <td class='table-body'> Nome</td>
+                      <td class='table-body'> 24/05/2019 11:14:43.710</td>
+                      <td class='table-body'> MARIO BONFIM LIMA DE OLIVEIRA</td>
+                      <td class='table-body'> OK</td>
+                      <td class='table-body'> 189.26.137.193</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>PGA / PRE PAGO - GOIS ALMEIDA</td>
+                      <td class='table-body'>*</td>
+                      <td class='table-body'> Nome</td>
+                      <td class='table-body'> 24/05/2019 11:14:43.697</td>
+                      <td class='table-body'> FABIANO DOS SANTOS BATISTA</td>
+                      <td class='table-body'> OK</td>
+                      <td class='table-body'> 201.37.163.51</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / BNS</td>
+                      <td class='table-body'>bns-amc</td>
+                      <td class='table-body'> Telefone</td>
+                      <td class='table-body'> 24/05/2019 11:14:42.937</td>
+                      <td class='table-body'> 15991274238</td>
+                      <td class='table-body'> NAO LOC</td>
+                      <td class='table-body'> 168.227.13.2</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / BNS</td>
+                      <td class='table-body'>bns-amc</td>
+                      <td class='table-body'> Telefone</td>
+                      <td class='table-body'> 24/05/2019 11:14:42.180</td>
+                      <td class='table-body'> 75885212872</td>
+                      <td class='table-body'> NAO LOC</td>
+                      <td class='table-body'> 168.227.13.2</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / BNS</td>
+                      <td class='table-body'>bns-amc</td>
+                      <td class='table-body'> Pessoa Jurídica</td>
+                      <td class='table-body'> 24/05/2019 11:14:41.703</td>
+                      <td class='table-body'> 13590205000116</td>
+                      <td class='table-body'> OK </td>
+                      <td class='table-body'>168.227.13.2</td>
+                    </tr>
+                    <tr>
+                      <td class='table-body'>InfoQualy / FERCRED ASSESSORIA FINANCEIRA</td>
+                      <td class='table-body'>*</td>
+                      <td class='table-body'> Pessoa Física</td>
+                      <td class='table-body'> 24/05/2019 11:14:41.450</td>
+                      <td class='table-body'> 06948676677</td>
+                      <td class='table-body'> OK</td>
+                      <td class='table-body'> 201.81.162.247</td>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <!-- fim body enriquecimento -->
+
+        </div>
+        <!-- fim secão enriquecer -->
+        
+      </div>
+
+
+    </div>
+    <!-- fim da view de renderização -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

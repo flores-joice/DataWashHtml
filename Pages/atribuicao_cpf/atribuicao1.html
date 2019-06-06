@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DataWash</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../SASS/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
+  <link rel="shortcut icon" href="../ASSETS/favicon.ico" />
+</head>
+
+<body>
+  <!-- nav horizontal -->
+  <nav
+    class="navbar navbar-light bg-light nav-horizontal align-items-center fixed-top d-flex justify-content-between shadow">
+    <a class="navbar-brand" href="../home.html">
+      <img src='../../ASSETS/logo.png' width="180" height="auto" alt="" />
+    </a>
+    <div class="d-flex align-items-center">
+      <p class="m-0">flores.joice@gmail.com</p>
+      <button class='btn px-4 btn-info ml-3'><a href="./home.html" class="text-white">Sair</a></button>
+    </div>
+  </nav>
+
+  <div class='d-flex w-100'>
+    <!-- inicio da view de renderização -->
+    <div class='view-navVertical pt-3 w-100 d-flex align-items-start justify-content-end'>
+      <div class='view-navVertical__list mt-5'>
+        <a href='../consulta.html' class='list-group-item view-navVertical__bg d-flex justify-content-between w-100'>
+          <span class='text-light'>Consulta</span>
+        </a>
+
+        <a href='#'
+          class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+          data-toggle="collapse" data-target="#enriquecimento" aria-controls="enriquecimento" aria-expanded="false"
+          aria-label="Alterna navegação">
+          <span class='text-light'>Enriquecimento</span>
+        </a>
+
+        <div class='collapse' id="enriquecimento">
+          <ul class="navbar-nav mr-auto pl-5" data-target="#listaEnriquecimento" aria-controls="listaEnriquecimento">
+            <li class="nav-item d-flex" id="listaEnriquecimento">
+              <a href='../enriquecimento/enriquecer.html' class="nav-link text-light">Enriquecer</a>
+            </li>
+            <li class="nav-item" id="listaEnriquecimento">
+              <a href='./atribuicao.html' class="nav-link text-light">Atribuição de
+                CPF</a>
+            </li>
+            <li class="nav-item" id="listaEnriquecimento">
+              <a href='../validacao_hot/validacaoHot.html' class="nav-link text-light">Validação Hot</a>
+            </li>
+          </ul>
+        </div>
+
+        <a href='../higienizacao/higienizacao.html' id='higienizacao'
+          class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+          <span class='text-light '>Higienização</span>
+        </a>
+
+        <a href='#'
+          class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+          data-toggle="collapse" data-target="#gerencial" aria-controls="gerencial" aria-expanded="false"
+          aria-label="Alterna navegação">
+          <span class='text-light'>Gerencial</span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="gerencial">
+          <ul class="navbar-nav mr-auto pl-5" data-target="#listaGerencial">
+            <li class="nav-item" id="listaGerencial"> <a href="../gerencial/contas.html" id='contas'
+                class="nav-link text-light">Contas</a> </li>
+            <li class="nav-item" id="listaGerencial"><a href="../gerencial/personalizacao.html" id='personalizacao'
+                class="nav-link text-light">Personalização</a></li>
+            <li class="nav-item" id="listaGerencial"><a href="../gerencial/extrato.html" id='extrtatoServicos'
+                class="nav-link text-light">Extrato de serviços</a></li>
+            <li class="nav-item" id="listaGerencial"><a href="../gerencial/fechamento.html" id='previaFechamento'
+                class="nav-link text-light">Prévia de fechamento</a></li>
+          </ul>
+        </div>
+
+        <a href='#'
+          class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+          data-toggle="collapse" data-target="#monitoracao" aria-controls="monitoracao" aria-expanded="true"
+          aria-label="Alterna navegação">
+          <span class='text-light'>Monitoração</span>
+        </a>
+
+        <div class="collapse" id="monitoracao">
+          <ul class="navbar-nav mr-auto pl-5" data-target="#monitoracao">
+            <li class="nav-item">
+              <a href="../monitoracao/monitConsulta.html" id='monitConsulta' class="nav-link text-light">Consulta</a>
+            </li>
+            <li class="nav-item" id="monitoracao">
+              <a href="../monitoracao/monitEnriquecimento.html" id='monitEnriquec'
+                class="nav-link text-light">Enriquecimento
+              </a>
+            </li>
+            <li class="nav-item" id="monitoracao">
+              <a href="../monitoracao/monitWebService.html" id='monitWebService' class="nav-link text-light">Web
+                Service</a>
+            </li>
+          </ul>
+        </div>
+
+        <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+          data-toggle="collapse" data-target="#conteudoNavbarSuportado5" aria-controls="conteudoNavbarSuportado"
+          aria-expanded="false" aria-label="Alterna navegação">
+          <span class='text-light'>Relatório</span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado5">
+          <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+            <li class="nav-item" id="listRelatorio">
+              <a href="../relatorio/relatConsulta.html" id='relatConsulta' class="nav-link text-light">Consulta</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../relatorio/relatEnriquecimento.html" id='relatEnriq'
+                class="nav-link text-light">Enriquecimento</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../relatorio/relatMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                list</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../relatorio/relatHigienizacao.html" id='relatHigienizacao'
+                class="nav-link text-light">Higienização
+              </a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../relatorio/relatWebService.html" id='relatWebService' class="nav-link text-light">Web
+                Service</a>
+            </li>
+          </ul>
+        </div>
+
+        <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+          data-toggle="collapse" data-target="#conteudoNavbarSuportado6" aria-controls="conteudoNavbarSuportado6"
+          aria-expanded="false" aria-label="Alterna navegação">
+          <span class='text-light'>Histórico & Downloads</span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado6">
+          <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+            <li class="nav-item" id="listRelatorio">
+              <a href="../historico/historicoEnriq.html" id='relatConsulta'
+                class="nav-link text-light">Enriquecimento</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../historico/historicoMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                List</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../historico/historicoHigienizacao.html" id='relatHigienizacao'
+                class="nav-link text-light">Higienização</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../historico/historicoWebService.html" id='relatWebService' class="nav-link text-light">Web
+                Service</a>
+            </li>
+            <li class="nav-item" id="listRelatorio">
+              <a href="../historico/historicoVeicular.html" id='relatWebService' class="nav-link text-light">Consulta
+                Veicular</a>
+            </li>
+          </ul>
+        </div>
+
+        <a id='mailingList' href='../mailingList.html'
+          class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+          <span class='text-light '>Mailing List</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="w-100 bg-grey pt-5 pb-4">
+
+      <!-- inicio secão enriquecer -->
+      <div class="w-100 mt-5 ">
+        <p class='h4 text-info pl-4'>Atribuição CPF</p>
+
+      </div>
+      <!-- fim do cabeçalho de enriquecimento -->
+
+      <!-- inicio body enriquecimento -->
+      <div class='box-enriquecimento w-100 d-flex flex-column align-items-center container'>
+        <div class="d-flex  flex-column justify-content-center align-items-center pt-3">
+          <div class="text-dark bg-light p-3 rounded my-3">
+            <p class="h5 font-weight-bold text-warning text-center">Verifique se realmente foi carregado o arquivo
+              correto.</p>
+            <p class="h6 text-center text-warning ">Também informe a definição dos campos, o conteúdo lógico de cada
+              campo do arquivo. Sem
+              isto não será possível atribuir o CPF / CNPJ corretamente. Quanto maior o número de informações
+              complementares, maior a eficiência da atribuição.</p>
+          </div>
+          <p>25%</p>
+          <div class="w-50 d-flex">
+            <div class="barra-1 w-25 bg-info rounded-left"></div>
+            <div class="w-25 bg-white"></div>
+            <div class="w-25 bg-white"></div>
+            <div class="w-25 bg-white rounded-right"></div>
+          </div>
+          <table class="table table-hover mt-5 w-100 rounded">
+            <thead class="thead-dark rounded ">
+              <tr class="rounded">
+                <th scope="col"></th>
+                <th scope="col">
+                  <select class="custom-select col-6 bg-white text-dark form-control input-consulta rounded">
+                    <option>CPF</option>
+                    <option>CNPJ</option>
+                    <option>Nome</option>
+                    <option>Endereço</option>
+                    <option>Bairro</option>
+                    <option>Cidade</option>
+                    <option>Telefone</option>
+                    <option>Placa</option>
+                  </select>
+                </th>
+                <th scope="col">
+                  <select class="custom-select col-6 bg-white text-dark form-control input-consulta rounded">
+                    <option>CPF</option>
+                    <option>CNPJ</option>
+                    <option>Nome</option>
+                    <option>Endereço</option>
+                    <option>Bairro</option>
+                    <option>Cidade</option>
+                    <option>Telefone</option>
+                    <option>Placa</option>
+                  </select>
+                </th>
+                <th scope="col">
+                  <select class="custom-select col-6 bg-white text-dark form-control input-consulta rounded">
+                    <option>CPF</option>
+                    <option>CNPJ</option>
+                    <option>Nome</option>
+                    <option>Endereço</option>
+                    <option>Bairro</option>
+                    <option>Cidade</option>
+                    <option>Telefone</option>
+                    <option>Placa</option>
+                  </select></th>
+              </tr>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">CPF</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Endereço</th>
+              </tr>
+            </thead>
+            <tbody class='bg-light'>
+              <tr>
+                <th scope="row">1</th>
+                <td>12045280713</td>
+                <td>Joice Flores</td>
+                <td>Rua Oriçanga</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>30914164880</td>
+                <td>Aleir Chicarelli</td>
+                <td>Mutinga</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>14524789632</td>
+                <td>Yuri Lazarino</td>
+                <td>Rua Heliotropio</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='w-100 d-flex justify-content-end '>
+
+            <button class='btn btn-info mr-2'> <a class="text-light" href="./atribuicao.html">Voltar</a></button>
+            <button class='btn btn-info'> <a class="text-light" href="./atribuicao2.html">Avançar</a></button>
+          </div>
+        </div>
+      </div>
+      <!-- fim body enriquecimento -->
+
+    </div>
+  </div>
+
+
+  </div>
+  <!-- fim da view de renderização -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

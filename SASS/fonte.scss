@@ -1,0 +1,62 @@
+
+.table {  
+  &-scroll{
+    width: 80vw;
+    overflow-x: scroll;
+
+    & > thead {
+      min-width: 250vw;
+    
+    }
+    & > tbody {
+      min-width: 250vw;
+    }
+
+    &-relHigien{
+      width: 80vw;
+      overflow-x: scroll; 
+
+      & > thead {
+        width: 100vw;
+
+        & > tr > th {
+          background-color: #17a2b8;
+        }
+      }
+      & > tbody {
+        width: 100vw;
+
+        & > tr {
+          background-color: rgb(250, 250, 250);
+        }
+        
+      }
+    }
+
+  }
+  
+  &-text {
+    font-size: 12px;
+    text-align: center;
+
+    &-12 {
+      font-size: 12px;
+    }
+
+  }
+}
+
+.buttom-absolute{
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1rem;
+
+}
+
+.buttom-absolute-relHigien{
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
+}
+
+

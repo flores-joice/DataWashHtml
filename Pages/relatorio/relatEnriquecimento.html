@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <text>Relatorio de Consulta</text>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../SASS/index.css">
+  <link rel="stylesheet" href="../../SASS/fonte.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
+</head>
+
+<text>
+  <!-- nav horizontal -->
+  <nav
+    class="navbar navbar-light bg-light nav-horizontal align-items-center fixed-top d-flex justify-content-between shadow"
+    onChange={this.tokenChange}>
+    <a class="navbar-brand" href="../home.html">
+      <img src='../../ASSETS/logo.png' width="180" height="auto" alt="" />
+    </a>
+    <div class="d-flex align-items-center">
+      <p class="m-0">flores.joice@gmail.com</p>
+      <button class='btn px-4 btn-info ml-3'><a href="../../index.html" class="text-white">Sair</a></button>
+    </div>
+  </nav>
+
+  <!-- inicio da view de renderização -->
+  <div class="d-flex  align-items-center mt-5">
+    <div class='d-flex '>
+
+      <!-- nav vertical -->
+      <div class='view-navVertical w-100 d-flex align-items-start justify-content-end'>
+        <div class='view-navVertical__list'>
+          <a href='../consulta.html' class='list-group-item view-navVertical__bg d-flex justify-content-between w-100'>
+            <span class='text-light'>Consulta</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#enriquecimento" aria-controls="enriquecimento" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Enriquecimento</span>
+          </a>
+
+          <div class='collapse' id="enriquecimento">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaEnriquecimento" aria-controls="listaEnriquecimento">
+              <li class="nav-item d-flex" id="listaEnriquecimento">
+                <a href='../enriquecimento/enriquecer.html' class="nav-link text-light">Enriquecer</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../atribuicao_cpf/atribuicao.html' class="nav-link text-light">Atribuição de
+                  CPF</a>
+              </li>
+              <li class="nav-item" id="listaEnriquecimento">
+                <a href='../validacao_hot/validacaoHot.html' class="nav-link text-light">Validação Hot</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href='../higienizacao/atribuicao.html' id='higienizacao'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Higienização</span>
+          </a>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#gerencial" aria-controls="gerencial" aria-expanded="false"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Gerencial</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="gerencial">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#listaGerencial">
+              <li class="nav-item" id="listaGerencial"> <a href="../gerencial/contas.html" id='contas'
+                  class="nav-link text-light">Contas</a> </li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencial/personalizacao.html" id='personalizacao'
+                  class="nav-link text-light">Personalização</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencialextrato.html" id='extrtatoServicos'
+                  class="nav-link text-light">Extrato de serviços</a></li>
+              <li class="nav-item" id="listaGerencial"><a href="../gerencialfechamento.html" id='previaFechamento'
+                  class="nav-link text-light">Prévia de fechamento</a></li>
+            </ul>
+          </div>
+
+          <a href='#'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#monitoracao" aria-controls="monitoracao" aria-expanded="true"
+            aria-label="Alterna navegação">
+            <span class='text-light'>Monitoração</span>
+          </a>
+
+          <div class="collapse" id="monitoracao">
+            <ul class="navbar-nav mr-auto pl-5" data-target="#monitoracao">
+              <li class="nav-item">
+                <a href="../monitoracao/monitConsulta.html" id='monitConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitEnriquecimento.html" id='monitEnriquec'
+                  class="nav-link text-light">Enriquecimento
+                </a>
+              </li>
+              <li class="nav-item" id="monitoracao">
+                <a href="../monitoracao/monitWebService.html" id='monitWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado5" aria-controls="conteudoNavbarSuportado"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Relatório</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado5">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatConsulta.html" id='relatConsulta' class="nav-link text-light">Consulta</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatEnriquecimento.html" id='relatEnriq' class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  list</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatHigienizacao.html" id='relatHigienizacao' class="nav-link text-light">Higienização
+                </a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="./relatWebService.html" id='relatWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <a class='list-group-item view-navVertical__bg d-flex justify-content-between align-items-center dropdown-toggle'
+            data-toggle="collapse" data-target="#conteudoNavbarSuportado6" aria-controls="conteudoNavbarSuportado6"
+            aria-expanded="false" aria-label="Alterna navegação">
+            <span class='text-light'>Histórico & Downloads</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado6">
+            <ul class="navbar-nav mr-auto pl-5" data-toggle="#listRelatorio">
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoEnriq.html" id='relatConsulta'
+                  class="nav-link text-light">Enriquecimento</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoMailing.html" id='relatMailingList' class="nav-link text-light">Mailing
+                  List</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoHigienizacao.html" id='relatHigienizacao'
+                  class="nav-link text-light">Higienização</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoWebService.html" id='relatWebService' class="nav-link text-light">Web
+                  Service</a>
+              </li>
+              <li class="nav-item" id="listRelatorio">
+                <a href="../historico/historicoVeicular.html" id='relatWebService' class="nav-link text-light">Consulta
+                  Veicular</a>
+              </li>
+            </ul>
+          </div>
+
+          <a id='mailingList' href='../mailingList.html'
+            class='list-group-item view-navVertical__bg d-flex justify-content-between'>
+            <span class='text-light '>Mailing List</span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="">
+
+        <!-- inicio secão enriquecer -->
+        <div class=''>
+
+          <!-- inicio cabeçalho de enriquecimento -->
+          <div class="d-flex justify-content-between align-items-center mt-5 ">
+            <p class='h4 text-info pl-4'>Relatório de Enriquecimento</p>
+          </div>
+          <!-- fim do cabeçalho de enriquecimento -->
+
+          <!-- inicio text enriquecimento -->
+          <div class='mt-5 pb-3 container'>
+            <div class='h-100 '>
+              <div class='  relatorio-page px-3'>
+
+                <div class=" position-relative d-flex flex-wrap bg-light container border rounded py-3">
+
+                  <div class='d-flex flex-column w-50 px-3 my-2'>
+                    <p class="m-0">Defina o período:</p>
+                    <div class="d-flex">
+                      <div class="input-group d-flex mr-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">De:</span>
+                        </div>
+                        <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                          aria-describedby="basic-addon1" />
+                      </div>
+                      <div class="input-group mr-2">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">De:</span>
+                        </div>
+                        <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                          aria-describedby="basic-addon1" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='d-flex flex-column w-50 px-3 my-2'>
+                    <p class='m-0'>Tipo de relatório:</p>
+                    <div class="d-flex">
+                      <div class="input-group mr-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='analitico' />
+                          </div>
+                        </div>
+                        <span class="form-control">Analítico</span>
+                      </div>
+                      <div class="input-group mr-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='sintetico' />
+                          </div>
+                        </div>
+                        <span class="form-control">Sintético</span>
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='total' />
+                          </div>
+                        </div>
+                        <span class="form-control">Total</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='d-flex flex-column w-50 px-3 mb-2'>
+                    <p class="m-0">Tipo de Enriquecimento:</p>
+                    <div class="d-flex flex-wrap">
+                      <div class="input-group w-50 mb-1">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='pessoaFisica' />
+                          </div>
+                        </div>
+                        <span class="form-control mr-2">P.Física</span>
+                      </div>
+                      <div class="input-group w-50 mb-1">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='pessoaJuridica' />
+                          </div>
+                        </div>
+                        <span class="form-control">P. Jurídica</span>
+                      </div>
+                      <div class="input-group w-50 mb-1">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='atribuicoes' />
+                          </div>
+                        </div>
+                        <span class="form-control mr-2">Atribuição</span>
+                      </div>
+                      <div class="input-group w-50 mb-1">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="radio" value='todos' />
+                          </div>
+                        </div>
+                        <span class="form-control">Todos</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='d-flex flex-column w-25 px-3'>
+                    <p class='m-0'>Cliente:</p>
+                    <div class="input-group">
+                      <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Escolha o cliente</option>
+                        <option value="1">Sistema</option>
+                        <option value="2">PGA</option>
+                        <option value="3">InfoQualy</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class='d-flex flex-column w-25 px-3'>
+                    <p class='m-0'>Carteira:</p>
+                    <div class="input-group">
+                      <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Escolha carteira</option>
+                        <option value="1">Clientes Próprios</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class='buttom-absolute'>
+                    <button class='btn btn-info mr-3' data-toggle="collapse" data-target="#collapseFilter"
+                      aria-expanded="false" aria-controls="collapseFilter">Gerar Relatório</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class='collapse container' id="collapseFilter">
+                <div class="d-flex flex-column justify-content-center align-items-center  border-top">
+                  <table class="table table-scroll d-flex flex-column  table-hover mt-3 rounded border">
+                    <thead class="bg-info rounded ">
+                      <tr class="d-flex">
+                        <th class="text-white table-text col">Data / Hora</th>
+                        <th class="text-white table-text col">Cliente / C.Custo</th>
+                        <th class="text-white table-text col">Usuário</th>
+                        <th class="text-white table-text col">Arquivo</th>
+                        <th class="text-white table-text col">Layout</th>
+                        <th class="text-white table-text col">Total de Registros</th>
+                        <th class="text-white table-text col">Docs Vál.</th>
+                        <th class="text-white table-text col">Docs Invál.</th>
+                        <th class="text-white table-text col">Atribuidos Doc</th>
+                        <th class="text-white table-text col">Enriq. Total</th>
+                        <th class="text-white table-text col">Enriq. Dados Contato</th>
+                        <th class="text-white table-text col">% Contato</th>
+                        <th class="text-white table-text col">Enriq. Endereço</th>
+                        <th class="text-white table-text col">Enriq. Telefone</th>
+                        <th class="text-white table-text col">Enriq. Tel. Fixo</th>
+                        <th class="text-white table-text col">Enriq. Tel. Com.</th>
+                        <th class="text-white table-text col">Enriq. Tel. Cel</th>
+                        <th class="text-white table-text col">Enriq. E-mail</th>
+                        <th class="text-white table-text col">Enriq. Dados Cadast.</th>
+                        <th class="text-white table-text col">% Cadastrais</th>
+                        <th class="text-white table-text col">Enriq. Dados Socio-econ.</th>
+                        <th class="text-white table-text col">Enriq. Relac.</th>
+                        <th class="text-white table-text col">Enriq. Cadast. PJ</th>
+                        <th class="text-white table-text col">Enriq. Contato PJ</th>
+                        <th class="text-white table-text col">Enriq. Sócios PJ</th>
+                        <th class="text-white table-text col">Enriq. Contato Sócios PJ</th>
+                      </tr>
+                    </thead>
+                    <tbody class='bg-white'>
+                      <tr class="d-flex">
+                        <td class="table-text col">28/05/2019 / 14:40:48</td>
+                        <td class="table-text col">InfoQualy</td>
+                        <td class="table-text col">Edcarlos</td>
+                        <td class="table-text col">TestLP_17.05.txt</td>
+                        <td class="table-text col">NEO</td>
+                        <td class="table-text col">91</td>
+                        <td class="table-text col">20</td>
+                        <td class="table-text col">71</td>
+                        <td class="table-text col">-</td>
+                        <td class="table-text col">13</td>
+                        <td class="table-text col">13</td>
+                        <td class="table-text col">65,00</td>
+                        <td class="table-text col">13</td>
+                        <td class="table-text col">10</td>
+                        <td class="table-text col">10</td>
+                        <td class="table-text col">7</td>
+                        <td class="table-text col">0</td>
+                        <td class="table-text col">4</td>
+                        <td class="table-text col">14</td>
+                        <td class="table-text col">70,00</td>
+                        <td class="table-text col">12</td>
+                        <td class="table-text col">-</td>
+                        <td class="table-text col">13</td>
+                        <td class="table-text col">0</td>
+                        <td class="table-text col">0</td>
+                        <td class="table-text col">0</td>
+                      </tr>
+
+                      <tr class="d-flex">
+                        <td class="table-text col font-weight-bold">-</td>
+                        <td class="table-text col font-weight-bold">Total</td>
+                        <td class="table-text col font-weight-bold">-</td>
+                        <td class="table-text col font-weight-bold">-</td>
+                        <td class="table-text col font-weight-bold">-</td>
+                        <td class="table-text col font-weight-bold">91</td>
+                        <td class="table-text col font-weight-bold">20</td>
+                        <td class="table-text col font-weight-bold">71</td>
+                        <td class="table-text col font-weight-bold">-</td>
+                        <td class="table-text col font-weight-bold">13</td>
+                        <td class="table-text col font-weight-bold">13</td>
+                        <td class="table-text col font-weight-bold">65,00</td>
+                        <td class="table-text col font-weight-bold">13</td>
+                        <td class="table-text col font-weight-bold">10</td>
+                        <td class="table-text col font-weight-bold">10</td>
+                        <td class="table-text col font-weight-bold">7</td>
+                        <td class="table-text col font-weight-bold">0</td>
+                        <td class="table-text col font-weight-bold">4</td>
+                        <td class="table-text col font-weight-bold">14</td>
+                        <td class="table-text col font-weight-bold">70,00</td>
+                        <td class="table-text col font-weight-bold">12</td>
+                        <td class="table-text col font-weight-bold">-</td>
+                        <td class="table-text col font-weight-bold">13</td>
+                        <td class="table-text col font-weight-bold">0</td>
+                        <td class="table-text col font-weight-bold">0</td>
+                        <td class="table-text col font-weight-bold">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- fim text enriquecimento -->
+
+          </div>
+        </div>
+      </div>
+      <!-- fim da view de renderização -->
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</text>
+
+</html>
