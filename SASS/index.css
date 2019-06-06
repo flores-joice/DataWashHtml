@@ -374,7 +374,7 @@ body {
   opacity: 0;
 }
 
-.line-buttons:hover .progress, .line-buttons:hover .box-absolute {
+.line-buttons:hover .progress, .line-buttons:hover .box-absolute, .line-buttons:hover .texto {
   display: none !important;
 }
 
@@ -383,7 +383,7 @@ body {
 }
 
 .buttons {
-  top: 20px;
+  top: 0px;
   bottom: 0;
   left: 0;
   right: 0;

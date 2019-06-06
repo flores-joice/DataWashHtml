@@ -328,7 +328,7 @@ body{
       opacity: 0;
     }
 
-    & .progress, .box-absolute {
+    & .progress, .box-absolute, .texto {
       display: none !important;
     }
     & .buttons, .buttons-historico, .buttons-historico_mailing {
@@ -339,7 +339,7 @@ body{
 }
 
 .buttons{
-  top: 20px;
+  top: 0px;
   bottom: 0;
   left: 0;
   right: 0;
