@@ -237,7 +237,7 @@ function Line() {
         1: { curveType: 'function' },
         2: { curveType: 'function' },
       },
-      legend: { position: 'bottom' },
+      legend: { position: 'top' },
       width: 650,
       height: 400
     };
