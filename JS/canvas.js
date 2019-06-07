@@ -227,7 +227,7 @@ function Line() {
       [2, 90, 105],
       [3, 115, 100],
       [4, 100, 95],
-      [5, 90, 112],
+      [5, 0, 0],
       [6, 85, 95],
       [7, 115, 103],
       [8, 110, 85],
@@ -257,13 +257,13 @@ function Barra() {
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['', 'Enriquecimento'],
-      ['Hoje', 50853],
+      ['Hoje', 114893],
    
     ]);
 
     var options = {
       width: 380,
-      height: 200,
+      height: 180,
        slices: {
         0: { color: 'green' },
       }
@@ -282,13 +282,13 @@ function Barra2() {
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['', 'Mailling List', 'Usuários'],
-      ['Hoje', 4045, 950],
+      ['Hoje', 4045, 1065],
    
     ]);
 
     var options = {
       width: 380,
-      height: 200,
+      height: 180,
       slices: {
         0: { color: 'green' },
         1: { color: 'blue' },
