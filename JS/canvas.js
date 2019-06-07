@@ -241,8 +241,8 @@ function Line() {
         1: { curveType: 'function' },
         2: { curveType: 'function' },
       },
-      width: 900,
-      height: 250
+      width: 600,
+      height: 400
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_home'));
@@ -262,8 +262,8 @@ function Barra() {
     ]);
 
     var options = {
-      width: 400,
-      height: 250,
+      width: 380,
+      height: 200,
        slices: {
         0: { color: 'green' },
       }
@@ -282,13 +282,13 @@ function Barra2() {
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['', 'Mailling List', 'Usuários'],
-      ['Hoje', 4045, 918],
+      ['Hoje', 4045, 950],
    
     ]);
 
     var options = {
-      width: 400,
-      height: 250,
+      width: 380,
+      height: 200,
       slices: {
         0: { color: 'green' },
         1: { color: 'blue' },
