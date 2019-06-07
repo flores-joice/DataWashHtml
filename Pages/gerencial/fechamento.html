@@ -158,14 +158,6 @@
                 <a href="../historico/historicoHigienizacao.html" id='relatHigienizacao'
                   class="nav-link text-light">Higienização</a>
               </li>
-              <li class="nav-item" id="listRelatorio">
-                <a href="../historico/historicoWebService.html" id='relatWebService' class="nav-link text-light">Web
-                  Service</a>
-              </li>
-              <li class="nav-item" id="listRelatorio">
-                <a href="../historico/historicoVeicular.html" id='relatWebService' class="nav-link text-light">Consulta
-                  Veicular</a>
-              </li>
             </ul>
           </div>
 
@@ -193,9 +185,9 @@
           <div class='d-flex flex-column mt-5 container w-100 align-items-center'>
 
             <!-- inicio de cabeçalho filtro -->
-            <div class='d-flex justify-content-around align-items-end w-100 bg-light rounded shadow p-3'>
+            <div class='d-flex justify-content-around align-items-end w-75 bg-light rounded shadow p-3'>
 
-              <div class="">
+              <div class="col-4">
                 <label for="inputGroupSelect01">Clientes</label>
                 <select class="custom-select w-100 rounded" id="inputGroupSelect01">
                   <option selected>Escolher...</option>
@@ -205,9 +197,9 @@
                 </select>
               </div>
 
-              <div class="">
+              <div class="col-6">
                 <label>Tipo de relatório</label>
-                <div class="d-flex w-75">
+                <div class="d-flex">
                   <div class="input-group mr-1">
                     <div class="input-group-prepend">
                       <div class="input-group-text rounded">
@@ -229,7 +221,7 @@
                 </div>
               </div>
 
-              <div class="">
+              <div class="col">
                 <button class="btn btn-info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
                   aria-controls="collapseExample">Gerar Relatório</button>
               </div>
