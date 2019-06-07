@@ -212,28 +212,24 @@ function PieChart2() {
 
 //GRAFICO LINE HOME
 function Line() {
-  google.charts.load('current', { packages: ['corechart', 'line'] });
-  google.charts.setOnLoadCallback(drawCurveTypes);
+  google.charts.load('current', { 'packages': ["corechart"] });
+  google.charts.setOnLoadCallback(drawChart);
 
-  function drawCurveTypes() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('number', 'X');
-    data.addColumn('number', 'Consulta');
-    data.addColumn('number', 'Web Service');
-
-    data.addRows([
-      [0, 95, 100],
-      [1, 110, 90],
-      [2, 90, 105],
-      [3, 115, 100],
-      [4, 100, 95],
-      [5, 0, 0],
-      [6, 85, 95],
-      [7, 115, 103],
-      [8, 110, 85],
-      [9, 70, 90],
-      [10, 90, 100],
-      [11, 85, 95],
+  function drawChart() {
+    var data = new google.visualization.arrayToDataTable([
+      ['Year', 'Consulta', 'WebService'],
+      ['10:00', 95, 100],
+      ['10:05', 110, 90],
+      ['10:10', 90, 105],
+      ['10:15', 115, 100],
+      ['10:20', 100, 95],
+      ['10:25', 80, 115],
+      ['10:30', 85, 95],
+      ['10:35', 115, 103],
+      ['10:40', 110, 85],
+      ['10:45', 0, 0],
+      ['10:50', 90, 100],
+      ['10:55', 85, 95],
     ]);
 
     var options = {
@@ -241,7 +237,8 @@ function Line() {
         1: { curveType: 'function' },
         2: { curveType: 'function' },
       },
-      width: 600,
+      legend: { position: 'bottom' },
+      width: 650,
       height: 400
     };
 
@@ -251,19 +248,20 @@ function Line() {
 }
 
 function Barra() {
-  google.charts.load('current', { 'packages': ['bar'] });
+  google.charts.load('current', { 'packages': ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
-      ['', 'Enriquecimento'],
-      ['Hoje', 114893],
+      ['', 'Enriquecimento', {role: 'style'}],
+      ['Hoje', 114893, 'opacity: 0.2'],
    
     ]);
 
     var options = {
       width: 380,
       height: 180,
+      
        slices: {
         0: { color: 'green' },
       }
