@@ -162,7 +162,7 @@ function Column() {
       height: 400,
       legend: { position: 'none' },
       axes: {
-        
+
       },
       bar: { groupWidth: "90%" }
     };
@@ -210,3 +210,93 @@ function PieChart2() {
   }
 };
 
+//GRAFICO LINE HOME
+function Line() {
+  google.charts.load('current', { packages: ['corechart', 'line'] });
+  google.charts.setOnLoadCallback(drawCurveTypes);
+
+  function drawCurveTypes() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'X');
+    data.addColumn('number', 'Consulta');
+    data.addColumn('number', 'Web Service');
+
+    data.addRows([
+      [0, 95, 100],
+      [1, 110, 90],
+      [2, 90, 105],
+      [3, 115, 100],
+      [4, 100, 95],
+      [5, 90, 112],
+      [6, 85, 95],
+      [7, 115, 103],
+      [8, 110, 85],
+      [9, 70, 90],
+      [10, 90, 100],
+      [11, 85, 95],
+    ]);
+
+    var options = {
+      series: {
+        1: { curveType: 'function' },
+        2: { curveType: 'function' },
+      },
+      width: 900,
+      height: 250
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_home'));
+    chart.draw(data, options);
+  }
+}
+
+function Barra() {
+  google.charts.load('current', { 'packages': ['bar'] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['', 'Enriquecimento'],
+      ['Hoje', 50853],
+   
+    ]);
+
+    var options = {
+      width: 400,
+      height: 250,
+       slices: {
+        0: { color: 'green' },
+      }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+}
+
+function Barra2() {
+  google.charts.load('current', { 'packages': ['bar'] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['', 'Mailling List', 'Usuários'],
+      ['Hoje', 4045, 918],
+   
+    ]);
+
+    var options = {
+      width: 400,
+      height: 250,
+      slices: {
+        0: { color: 'green' },
+        1: { color: 'blue' },
+      }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('columnchart_material2'));
+
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+}
