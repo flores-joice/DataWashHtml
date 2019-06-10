@@ -192,7 +192,7 @@ function PieChart2() {
 
     var options = {
       width: 600,
-      height: 500,
+      height: 300,
       // slices: {
       //   0: { color: '#1d75d3' },
       //   1: { color: '#f58634' },
