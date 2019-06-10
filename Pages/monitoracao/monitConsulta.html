@@ -16,6 +16,7 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="../../JS/canvas.js"></script>
   <script src="../../JS/grafic_line.js"></script>
+  <script src="../../JS/historigram.js"></script>
 </head>
 
 <body>
@@ -240,17 +241,20 @@
                 <div class="bg-white w-100">
                   <h3 class="px-3 pt-3">Consultas por período</h3>
                   <div class="d-flex align-items-center">
-                    <div id="chart_div"></div>
+                    <div id="chart_div2">
+                        <script>Area();</script>
+                    </div>
                     <div id="donutchart">
                       <script>Donut();</script>
                     </div>
                   </div>
                 </div>
-
+                <!-- <div id="chart_historigram"></div> -->
                 <!-- TEMPO DE EXECUÇÃO -->
                 <div class="bg-white mt-2 w-100">
                   <h3 class="p-3">Tempo de execução</h3>
                   <div class="d-flex align-items-center">
+
                     <div id="piechart">
                       <script>PieChart();</script>
                     </div>

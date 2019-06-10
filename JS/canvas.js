@@ -62,7 +62,7 @@ function Donut() {
       title: '',
       pieHole: 0.4,
       width: 400,
-      height: 500,
+      height: 300,
       slices: {
         0: { color: '#1d75d3' },
         1: { color: 'red' },
@@ -99,11 +99,9 @@ function Area() {
     ]);
 
     var options = {
-      title: '',
-      hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
-      vAxis: { minValue: 0 },
-      width: 600,
-      height: 500
+      vAxis: { minValue: 0, maxValue: 200 },
+      width: 700,
+      height: 300
     };
 
     var chartArea = new google.visualization.AreaChart(document.getElementById('chart_div2'));
@@ -131,12 +129,13 @@ function PieChart() {
 
     var options = {
       width: 500,
-      height: 500,
+      height: 300,
       slices: {
         0: { color: '#1d75d3' },
         1: { color: '#f58634' },
         2: { color: '#8c7970' }
-      }
+      },
+      vAxis: { minValue: 0, maxValue: 100.000 },
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -153,18 +152,15 @@ function Column() {
     var data = new google.visualization.arrayToDataTable([
       ['', 'Percentage'],
       ["Máx", 33946],
-      ["Méd", 37],
-      ["Min", 3],
+      ["Méd", 10000],
+      ["Min", 5000],
     ]);
 
     var options = {
       width: 555,
-      height: 400,
+      height: 300,
       legend: { position: 'none' },
-      axes: {
-
-      },
-      bar: { groupWidth: "90%" }
+      bar: { groupWidth: "50%" }
     };
 
     var chart = new google.charts.Bar(document.getElementById('top_x_div'));
