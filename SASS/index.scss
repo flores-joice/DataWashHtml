@@ -187,7 +187,7 @@ body{
 }
 .dica {
   position: absolute;
-  top: 6em;
+  top: 0 ;
   right: 1em;
 
   &:hover &-texto{
@@ -390,12 +390,13 @@ body{
     }
 }
 
-// .box-absolute{
-//   opacity: 1
-// }
-
 .progress{
   height: 5vh;
   width: 10vw;
   left: 15px;
+}
+
+.tooltip-div{
+  top: 20px;
+  right: 50px;
 }

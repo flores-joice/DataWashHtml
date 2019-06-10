@@ -168,56 +168,57 @@
         </div>
       </div>
 
-      <div class="w-100 ">
+      <div class="w-100 position-relative">
 
-        <!-- inicio cabeçalho de enriquecimento -->
-        <div class="w-100 d-flex justify-content-between align-items-center  ">
-          <p class='h4 text-info pl-4 mt-5'>Enriquecimento</p>
-
-          <!-- inicio tooltip -->
-          <div class='d-flex mt-3'>
-            <img alt='icone' class='dica-img mr-3 mt-4' src='../../ASSETS/info.png' />
-            <div class='dica-texto px-2 position-absolute rounded bg-light sombra'>
-              <div id='enriquecerInfo' class='enriquecer-info p-3 list-group' data-toggle="tooltip"
-                title='Ponto de partida'>
-                <div>
-                  <h5 class='text-info'>Ponto de partida</h5>
-                  <p class='text-info'>Você deve escolher e carregar para o servidor o arquivo que será enriquecido.
-                  </p>
-                </div>
-                <ul class='enriquecer-info__list p-1 text-info'>
-                  <strong>Regras sobre os arquivos:</strong>
-                  <li class='text-info'>Tamanho máximo do arquivo: 300MB</li>
-                  <li class='text-info'>Tipos de arquivos permitidos: csv, txt, xls e xlsx</li>
-                  <li class='text-info'>Arquivos csv e txt deverão ter terminador de linha CR+LF e ser delimitados, ou
-                    seja,
-                    ter um caractér que separe os campos. Caracteres aceitos como separador:</li>
-                  <li class='text-info'>; (ponto-e-vírgula)</li>
-                  <li class='text-info'>, (vírgula)</li>
-                  <li class='text-info'>| (barra vertical)</li>
-                  <li class='text-info'>tab (caractér ascii 009)</li>
-                  <li class='text-info'>Todos os arquivos deverão ter na primeira linha o nome dos campos</li>
-                  <li class='text-info'>Única exceção para arquivos com somente CPF / CNPJ</li>
-                  <li class='text-info'>Os nomes dos campos não deverão conter espaço, caracteres acentuados ou
-                    especiais
-                  </li>
-                  <li class='text-info'>O campo de CPF / CNPJ deve ser obrigatóriamente o primeiro campo do arquivo
-                  </li>
-                  <li class='text-info'>Para arquivos Excel o nome da planilha (aba na parte inferior esquerda) deve
-                    estar
-                    da forma original, sem alteração (Plan1)</li>
-                  <li class='text-info'>Arquivos com mesmo nome de arquivos já carregados se sobrepõe aos mesmos</li>
-                </ul>
+        <!-- inicio tooltip -->
+        <div class='d-flex mt-3 dica'>
+          <img alt='icone' class='dica-img mr-3 mt-4' src='../../ASSETS/info.png' />
+          <div class='dica-texto px-2 position-absolute rounded bg-light sombra'>
+            <div id='enriquecerInfo' class='enriquecer-info p-3 list-group' data-toggle="tooltip"
+              title='Ponto de partida'>
+              <div>
+                <h5 class='text-info'>Ponto de partida</h5>
+                <p class='text-info'>Você deve escolher e carregar para o servidor o arquivo que será enriquecido.
+                </p>
               </div>
+              <ul class='enriquecer-info__list p-1 text-info'>
+                <strong>Regras sobre os arquivos:</strong>
+                <li class='text-info'>Tamanho máximo do arquivo: 300MB</li>
+                <li class='text-info'>Tipos de arquivos permitidos: csv, txt, xls e xlsx</li>
+                <li class='text-info'>Arquivos csv e txt deverão ter terminador de linha CR+LF e ser delimitados, ou
+                  seja,
+                  ter um caractér que separe os campos. Caracteres aceitos como separador:</li>
+                <li class='text-info'>; (ponto-e-vírgula)</li>
+                <li class='text-info'>, (vírgula)</li>
+                <li class='text-info'>| (barra vertical)</li>
+                <li class='text-info'>tab (caractér ascii 009)</li>
+                <li class='text-info'>Todos os arquivos deverão ter na primeira linha o nome dos campos</li>
+                <li class='text-info'>Única exceção para arquivos com somente CPF / CNPJ</li>
+                <li class='text-info'>Os nomes dos campos não deverão conter espaço, caracteres acentuados ou
+                  especiais
+                </li>
+                <li class='text-info'>O campo de CPF / CNPJ deve ser obrigatóriamente o primeiro campo do arquivo
+                </li>
+                <li class='text-info'>Para arquivos Excel o nome da planilha (aba na parte inferior esquerda) deve
+                  estar
+                  da forma original, sem alteração (Plan1)</li>
+                <li class='text-info'>Arquivos com mesmo nome de arquivos já carregados se sobrepõe aos mesmos</li>
+              </ul>
             </div>
           </div>
-          <!-- fim tooltip -->
+        </div>
+        <!-- fim tooltip -->
+
+        <!-- inicio cabeçalho de enriquecimento -->
+        <div class="w-100 d-flex justify-content-between align-items-center ">
+          <p class='h4 text-info pl-4 mt-5'>Enriquecimento</p>
+
         </div>
         <!-- fim do cabeçalho de enriquecimento -->
 
         <!-- inicio body enriquecimento -->
         <!-- box-enriquecimento class -->
-        <div class='mt-5 w-100 d-flex flex-column justify-content-center align-items-center'>
+        <div style="height: 75vh;" class='w-100 d-flex flex-column justify-content-center align-items-center'>
 
           <p class="h4 mb-5 bg-white py-2 px-5 text-center text-warning font-weight-bold rounded">Insira o arquivo a
             ser enriquecido.</p>
