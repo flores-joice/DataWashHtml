@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="../../JS/canvas.js"></script>
+  <script src="../../JS/grafic_line.js"></script>
 </head>
 
 <body>
@@ -232,16 +233,14 @@
             <!-- FIM FILTRO -->
 
             <!-- TABELA -->
-            <div class='w-100 collapse show my-5' id="collapseFilter">
-              <div class="d-flex flex-column justify-content-center align-items-center  border-top">
+            <div class='w-100 collapse my-3' id="collapseFilter">
+              <div class="d-flex flex-column justify-content-center align-items-center border-top">
 
                 <!-- CONSULTA POR PERIODO -->
-                <div class="bg-white">
-                  <h3 class="p-3">Consultas por período</h3>
-                  <div class="d-flex">
-                    <div id="chart_div" class="p-0">
-                      <script>Line();</script>
-                    </div>
+                <div class="bg-white w-100">
+                  <h3 class="px-3 pt-3">Consultas por período</h3>
+                  <div class="d-flex align-items-center">
+                    <div id="chart_div"></div>
                     <div id="donutchart">
                       <script>Donut();</script>
                     </div>
@@ -249,7 +248,7 @@
                 </div>
 
                 <!-- TEMPO DE EXECUÇÃO -->
-                <div class="bg-white mt-2">
+                <div class="bg-white mt-2 w-100">
                   <h3 class="p-3">Tempo de execução</h3>
                   <div class="d-flex align-items-center">
                     <div id="piechart">

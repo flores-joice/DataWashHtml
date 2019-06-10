@@ -1,10 +1,11 @@
 //GRAFICO LINE
 function Line() {
-  google.charts.load('current', { packages: ['corechart', 'line'] });
-  google.charts.setOnLoadCallback(drawCurveTypes);
+  google.charts.load('current', { packages: ['corechart'] });
+  google.charts.setOnLoadCallback(drawChart);
 
-  function drawCurveTypes() {
+  function drawChart() {
     var data = new google.visualization.DataTable();
+    data.addColumn('namber', )
     data.addColumn('number', 'X');
     data.addColumn('number', 'OK');
     data.addColumn('number', 'NÃO LOC');
@@ -29,11 +30,10 @@ function Line() {
       hAxis: {
         title: 'Time'
       },
+      curveType: 'function',
+      intervals: {'style': 'line'},
       vAxis: {
         title: 'Consultas'
-      },
-      series: {
-        1: { curveType: 'function' }
       },
       width: 600,
       height: 500
@@ -61,7 +61,7 @@ function Donut() {
     var options = {
       title: '',
       pieHole: 0.4,
-      width: 500,
+      width: 400,
       height: 500,
       slices: {
         0: { color: '#1d75d3' },
@@ -77,7 +77,7 @@ function Donut() {
 
 //GRAFICO AREA
 function Area() {
-  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
@@ -114,7 +114,7 @@ function Area() {
 //GRAFICO Pie Chart
 function PieChart() {
 
-  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
@@ -146,7 +146,7 @@ function PieChart() {
 };
 
 function Column() {
-  google.charts.load('current', { 'packages': ['bar'] });
+  google.charts.load('current', { packages: ['bar'] });
   google.charts.setOnLoadCallback(drawStuff);
 
   function drawStuff() {
@@ -175,7 +175,7 @@ function Column() {
 
 function PieChart2() {
 
-  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
@@ -212,7 +212,7 @@ function PieChart2() {
 
 //GRAFICO LINE HOME
 function Line() {
-  google.charts.load('current', { 'packages': ["corechart"] });
+  google.charts.load('current', { packages: ["corechart"] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
@@ -248,21 +248,21 @@ function Line() {
 }
 
 function Barra() {
-  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
-      ['', 'Enriquecimento', {role: 'style'}],
+      ['', 'Enriquecimento', { role: 'style' }],
       ['Hoje', 114893, 'opacity: 0.2'],
-   
+
     ]);
 
     var options = {
       width: 380,
       height: 180,
-      
-       slices: {
+
+      slices: {
         0: { color: 'green' },
       }
     };
@@ -274,14 +274,14 @@ function Barra() {
 }
 
 function Barra2() {
-  google.charts.load('current', { 'packages': ['bar'] });
+  google.charts.load('current', { packages: ['bar'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['', 'Mailling List', 'Usuários'],
       ['Hoje', 4045, 1065],
-   
+
     ]);
 
     var options = {
