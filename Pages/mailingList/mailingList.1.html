@@ -162,7 +162,7 @@
             </ul>
           </div>
 
-          <a id='mailingList' href='./mailingList.1.html'
+          <a id='mailingList' href='./mailingList/mailingList.html'
             class='list-group-item view-navVertical__bg d-flex justify-content-between'>
             <span class='text-light '>Mailing List</span>
           </a>
@@ -170,258 +170,266 @@
         </div>
       </div>
 
-      <div class="mt-5 w-100">
-        <div class='m-5 py-3 w-100 d-flex flex-column justify-content-center align-items-center'>
-          <div class=' w-75 bg-light p-3 loca-div shadow rounded accordion' id="accordionExample">
-            <p class="mt-5">Quer filtrar por:</p>
-            <div class='d-flex justify-content-around border-top pt-4 mb-4'>
-              <button class='btn border-info col mx-1' id="buttonCidade" type="button" data-toggle="collapse"
-                data-target="#collapseCidade" aria-expanded="false" aria-controls="collapseCidade">Cidade</button>
-              <button class='btn border-info col mx-1' type="button" data-toggle="collapse"
-                data-target="#collapseEstado" aria-expanded="false" aria-controls="collapseEstado">Estado</button>
-              <button class='btn border-info col mx-1' type="button" data-toggle="collapse"
-                data-target="#collapseBrasil" aria-expanded="false" aria-controls="collapseBrasil">Brasil</button>
-              <button class='btn border-info col mx-1' type="button" data-toggle="collapse"
-                data-target="#collapseCep" aria-expanded="false" aria-controls="collapseCep">CEP</button>
-              <button class='btn border-info col mx-1' type="button" data-toggle="collapse"
-                data-target="#collapseDDD" aria-expanded="false" aria-controls="collapseDDD">DDD</button>
-            </div>
-            <div class="collapse" id="collapseCidade" aria-labelledby="buttonCidade" data-parent="#accordionExample">
-              <div class='w-100 border p-4 rounded'>
-                <div class='w-100 d-flex align-items-center'>
-                  <div class='col-5 p-0'>
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Estado</label>
-                      </div>
-                      <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Escolher..</option>
-                        <option value='Rio de Janeiro'>Rio de Janeiro</option>
-                        <option value='São Paulo'>São Paulo</option>
-                        <option value='Minas Gerais'>Minas Gerais</option>
-                        <option value='Espírito Santo'>Espírito Santo</option>
-                        <option value='Paraná'>Paraná</option>
-                      </select>
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Cidade</label>
-                      </div>
-                      <select class="custom-select" id="inputGroupSelect01" disabled>
-                        <option selected>Escolher..</option>
-                        <option value='Rio de Janeiro'>Rio de Janeiro</option>
-                        <option value='São Paulo'>São Paulo</option>
-                        <option value='Vitória'>Vitória</option>
-                        <option value='Curitiba'>Curitiba</option>
-                        <option value='Belo Horizonte'>Belo Horizonte</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class='col-2 d-flex flex-column'>
-                    <button class='btn btn-info'>Adicionar</button>
-                    <button class='btn btn-info my-1'>Remover</button>
-                    <button class='btn btn-info'>Limpar</button>
-                  </div>
-                  <div class='col-5 border rounded box-select'>
-                    <span></span>
-                  </div>
-                </div>
-                <div class='d-flex flex-wrap mt-4 border-top py-2'>
-                  <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
-                  <div class="input-group col-6">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                      </div>
-                    </div>
-                    <p class="form-control">Contagem única</p>
-                  </div>
-                  <div class="input-group col-6">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                      </div>
-                    </div>
-                    <p class="form-control">Contagem separada por cidade</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="w-100 pt-5 pb-4">
+        <!-- inicio secão mailing -->
+        <div class="w-100 mt-5 ">
+          <p class='h4 text-info pl-4'>Mailing List</p>
 
-            <div class="collapse" id="collapseEstado" aria-labelledby="buttonEstado" data-parent="#accordionExample">
-              <div class='w-100 border p-4 rounded'>
-                <div class='w-100 d-flex align-items-center'>
-                  <div class='col-5 p-0'>
-                    <div class="input-group ">
-                      <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Estado</label>
-                      </div>
-                      <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Escolher..</option>
-                        <option value='Rio de Janeiro'>Rio de Janeiro</option>
-                        <option value='São Paulo'>São Paulo</option>
-                        <option value='Minas Gerais'>Minas Gerais</option>
-                        <option value='Espírito Santo'>Espírito Santo</option>
-                        <option value='Paraná'>Paraná</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class='col-2 d-flex flex-column'>
-                    <button class='btn btn-info'>Adicionar</button>
-                    <button class='btn btn-info my-1'>Remover</button>
-                    <button class='btn btn-info'>Limpar</button>
-                  </div>
-                  <div class='col-5 border rounded box-select'>
-                    <span></span>
-                  </div>
-                </div>
-                <div class='d-flex flex-wrap mt-4 border-top py-2'>
-                  <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
-                  <div class="input-group col-4">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                      </div>
-                    </div>
-                    <p class="form-control">Contagem única</p>
-                  </div>
-                  <div class="input-group col-4">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                      </div>
-                    </div>
-                    <p class="form-control">Separar por Estado</p>
-                  </div>
-                  <div class="input-group col-4">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                      </div>
-                    </div>
-                    <p class="form-control">Separar por cidade</p>
-                  </div>
-                </div>
+          <div class='my-5 py-3 w-100 d-flex flex-column justify-content-center align-items-center'>
+
+            <div class=' w-75 bg-light p-3 loca-div shadow rounded accordion' id="accordionExample">
+              <p class="mt-5">Quer filtrar por:</p>
+              <div class='d-flex justify-content-around border-top pt-4 mb-4'>
+                <button class='btn border-info col mx-1' id="buttonCidade" type="button" data-toggle="collapse"
+                  data-target="#collapseCidade" aria-expanded="false" aria-controls="collapseCidade">Cidade</button>
+                <button class='btn border-info col mx-1' type="button" data-toggle="collapse"
+                  data-target="#collapseEstado" aria-expanded="false" aria-controls="collapseEstado">Estado</button>
+                <button class='btn border-info col mx-1' type="button" data-toggle="collapse"
+                  data-target="#collapseBrasil" aria-expanded="false" aria-controls="collapseBrasil">Brasil</button>
+                <button class='btn border-info col mx-1' type="button" data-toggle="collapse" data-target="#collapseCep"
+                  aria-expanded="false" aria-controls="collapseCep">CEP</button>
+                <button class='btn border-info col mx-1' type="button" data-toggle="collapse" data-target="#collapseDDD"
+                  aria-expanded="false" aria-controls="collapseDDD">DDD</button>
               </div>
-            </div>
-            <div class="collapse" id="collapseBrasil" aria-labelledby="buttonBrasil" data-parent="#accordionExample">
+              <div class="collapse" id="collapseCidade" aria-labelledby="buttonCidade" data-parent="#accordionExample">
                 <div class='w-100 border p-4 rounded'>
-                    <div class="alert alert-info" role="alert">
-                      O tempo para contagem em nível nacional pode ser alto, recomendamos que defina os filtros de pesquisa.
-                    </div>
-                    <div class='d-flex flex-wrap mt-4 border-top py-2'>
-                      <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
-                      <div class="input-group col-4">
+                  <div class='w-100 d-flex align-items-center'>
+                    <div class='col-5 p-0'>
+                      <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                          </div>
+                          <label class="input-group-text" for="inputGroupSelect01">Estado</label>
                         </div>
-                        <p class="form-control">Contagem única</p>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option selected>Escolher..</option>
+                          <option value='Rio de Janeiro'>Rio de Janeiro</option>
+                          <option value='São Paulo'>São Paulo</option>
+                          <option value='Minas Gerais'>Minas Gerais</option>
+                          <option value='Espírito Santo'>Espírito Santo</option>
+                          <option value='Paraná'>Paraná</option>
+                        </select>
                       </div>
-                      <div class="input-group col-4">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                          </div>
-                        </div>
-                        <p class="form-control">Separar por Estado</p>
-                      </div>
-                      <div class="input-group col-4">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                          </div>
-                        </div>
-                        <p class="form-control">Separar por cidade</p>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="collapse" id="collapseCep" aria-labelledby="buttonCep" data-parent="#accordionExample">
-                <div class='w-100 border p-4 rounded'>
-                    <div class='w-100 d-flex align-items-center'>
-                      <div class='col-5 p-0'>
-                        <div class="input-group ">
-                          <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">DDD</label>
-                          </div>
-                          <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Escolher..</option>
-                            <option value='Rio de Janeiro'>21</option>
-                            <option value='São Paulo'>11</option>
-                            <option value='Minas Gerais'>31</option>
-                            <option value='Espírito Santo'>27</option>
-                            <option value='Paraná'>41</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class='col-2 d-flex flex-column'>
-                        <button class='btn btn-info'>Adicionar</button>
-                        <button class='btn btn-info my-1'>Remover</button>
-                        <button class='btn btn-info'>Limpar</button>
-                      </div>
-                      <div class='col-5 border rounded box-select'>
-                        <span></span>
-                      </div>
-                    </div>
-                    <div class='d-flex flex-wrap mt-4 border-top py-2'>
-                      <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
-                      <div class="input-group col-6">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                          </div>
-                        </div>
-                        <p class="form-control">Contagem única</p>
-                      </div>
-                      <div class="input-group col-6">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
-                          </div>
-                        </div>
-                        <p class="form-control">Contagem separada por cidade</p>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="collapse" id="collapseDDD" aria-labelledby="buttonDDD" data-parent="#accordionExample">
-                <div class='w-100 border p-4 rounded'>
-                    <div class='w-100 d-flex'>
-                      <div class='col-5 border rounded box-select'>
-                        <span></span>
-                      </div>
-                      <div class='col-2 d-flex flex-column'>
-                        <button class='btn btn-info'>Adicionar</button>
-                        <button class='btn btn-info my-1'>Remover</button>
-                        <button class='btn btn-info'>Limpar</button>
-                      </div>
-                      <div class='col-5 border rounded box-select'>
-                        <span></span>
-                      </div>
-                    </div>
-                    <div class='d-flex flex-wrap mt-4 border-top py-2'>
-                      <p class='col-12 h6'>Digite o CEP para pesquisar</p>
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1">CEP</span>
+                          <label class="input-group-text" for="inputGroupSelect01">Cidade</label>
                         </div>
-                        <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1" />
+                        <select class="custom-select" id="inputGroupSelect01" disabled>
+                          <option selected>Escolher..</option>
+                          <option value='Rio de Janeiro'>Rio de Janeiro</option>
+                          <option value='São Paulo'>São Paulo</option>
+                          <option value='Vitória'>Vitória</option>
+                          <option value='Curitiba'>Curitiba</option>
+                          <option value='Belo Horizonte'>Belo Horizonte</option>
+                        </select>
                       </div>
                     </div>
+                    <div class='col-2 d-flex flex-column'>
+                      <button class='btn btn-info'>Adicionar</button>
+                      <button class='btn btn-info my-1'>Remover</button>
+                      <button class='btn btn-info'>Limpar</button>
+                    </div>
+                    <div class='col-5 border rounded box-select'>
+                      <span></span>
+                    </div>
                   </div>
-            </div>
+                  <div class='d-flex flex-wrap mt-4 border-top py-2'>
+                    <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
+                    <div class="input-group col-6">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Contagem única</p>
+                    </div>
+                    <div class="input-group col-6">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Contagem separada por cidade</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <div class='d-flex justify-content-end pt-3'>
-              <span class=''>Localização Obrigatória *</span>
-              <a href="./mailingList.2.html"><button class='btn btn-info mx-2'>Avançar</button></a>
-              <a href="./mailingList.1.html"><button class='btn btn-danger'>Cancelar</button></a>
+              <div class="collapse" id="collapseEstado" aria-labelledby="buttonEstado" data-parent="#accordionExample">
+                <div class='w-100 border p-4 rounded'>
+                  <div class='w-100 d-flex align-items-center'>
+                    <div class='col-5 p-0'>
+                      <div class="input-group ">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Estado</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option selected>Escolher..</option>
+                          <option value='Rio de Janeiro'>Rio de Janeiro</option>
+                          <option value='São Paulo'>São Paulo</option>
+                          <option value='Minas Gerais'>Minas Gerais</option>
+                          <option value='Espírito Santo'>Espírito Santo</option>
+                          <option value='Paraná'>Paraná</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class='col-2 d-flex flex-column'>
+                      <button class='btn btn-info'>Adicionar</button>
+                      <button class='btn btn-info my-1'>Remover</button>
+                      <button class='btn btn-info'>Limpar</button>
+                    </div>
+                    <div class='col-5 border rounded box-select'>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class='d-flex flex-wrap mt-4 border-top py-2'>
+                    <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
+                    <div class="input-group col-4">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Contagem única</p>
+                    </div>
+                    <div class="input-group col-4">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Separar por Estado</p>
+                    </div>
+                    <div class="input-group col-4">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Separar por cidade</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse" id="collapseBrasil" aria-labelledby="buttonBrasil" data-parent="#accordionExample">
+                <div class='w-100 border p-4 rounded'>
+                  <div class="alert alert-info" role="alert">
+                    O tempo para contagem em nível nacional pode ser alto, recomendamos que defina os filtros de
+                    pesquisa.
+                  </div>
+                  <div class='d-flex flex-wrap mt-4 border-top py-2'>
+                    <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
+                    <div class="input-group col-4">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Contagem única</p>
+                    </div>
+                    <div class="input-group col-4">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Separar por Estado</p>
+                    </div>
+                    <div class="input-group col-4">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Separar por cidade</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse" id="collapseCep" aria-labelledby="buttonCep" data-parent="#accordionExample">
+                <div class='w-100 border p-4 rounded'>
+                  <div class='w-100 d-flex align-items-center'>
+                    <div class='col-5 p-0'>
+                      <div class="input-group ">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">DDD</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option selected>Escolher..</option>
+                          <option value='Rio de Janeiro'>21</option>
+                          <option value='São Paulo'>11</option>
+                          <option value='Minas Gerais'>31</option>
+                          <option value='Espírito Santo'>27</option>
+                          <option value='Paraná'>41</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class='col-2 d-flex flex-column'>
+                      <button class='btn btn-info'>Adicionar</button>
+                      <button class='btn btn-info my-1'>Remover</button>
+                      <button class='btn btn-info'>Limpar</button>
+                    </div>
+                    <div class='col-5 border rounded box-select'>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class='d-flex flex-wrap mt-4 border-top py-2'>
+                    <p class='col-12 h6'>Selecione como deseja a saída da contagem:</p>
+                    <div class="input-group col-6">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Contagem única</p>
+                    </div>
+                    <div class="input-group col-6">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <input type="radio" name="estado" aria-label="Botão radio para acompanhar input text" />
+                        </div>
+                      </div>
+                      <p class="form-control">Contagem separada por cidade</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse" id="collapseDDD" aria-labelledby="buttonDDD" data-parent="#accordionExample">
+                <div class='w-100 border p-4 rounded'>
+                  <div class='w-100 d-flex'>
+                    <div class='col-5 border rounded box-select'>
+                      <span></span>
+                    </div>
+                    <div class='col-2 d-flex flex-column'>
+                      <button class='btn btn-info'>Adicionar</button>
+                      <button class='btn btn-info my-1'>Remover</button>
+                      <button class='btn btn-info'>Limpar</button>
+                    </div>
+                    <div class='col-5 border rounded box-select'>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class='d-flex flex-wrap mt-4 border-top py-2'>
+                    <p class='col-12 h6'>Digite o CEP para pesquisar</p>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">CEP</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário"
+                        aria-describedby="basic-addon1" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class='d-flex justify-content-end pt-3'>
+                <span class=''>Localização Obrigatória *</span>
+                <a href="./mailingList.3.html"><button class='btn btn-info mx-2'>Avançar</button></a>
+                <a href="./mailingList.html"><button class='btn btn-danger'>Cancelar</button></a>
+              </div>
             </div>
           </div>
         </div>
+        <!-- fim secão mailing -->
       </div>
-
     </div>
     <!-- fim da view de renderização -->
   </div>
